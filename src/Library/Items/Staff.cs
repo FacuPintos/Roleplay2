@@ -1,8 +1,8 @@
 namespace RoleplayGame
 {
-    public class Staff
+    public class Staff : IItems
     {
-        public int AttackValue 
+        public int Value 
         {
             get
             {
@@ -10,12 +10,5 @@ namespace RoleplayGame
             } 
         }
 
-        public int DefenseValue
-        {
-            get
-            {
-                return 100;
-            }
-        }
     }
 }

@@ -1,8 +1,8 @@
 namespace RoleplayGame
 {
-    public class Armor
+    public class Armor : IItems
     {
-        public int DefenseValue
+        public int Value
         {
             get
             {

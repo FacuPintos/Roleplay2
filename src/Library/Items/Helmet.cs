@@ -2,7 +2,7 @@ namespace RoleplayGame
 {
     public class Helmet
     {
-        public int DefenseValue
+        public int Value
         {
             get
             {

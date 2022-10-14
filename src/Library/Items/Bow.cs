@@ -1,8 +1,8 @@
 namespace RoleplayGame
 {
-    public class Bow
+    public class Bow : IItems
     {
-        public int AttackValue 
+        public int Value 
         {
             get
             {
