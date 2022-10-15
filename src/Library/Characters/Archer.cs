@@ -3,7 +3,8 @@ namespace RoleplayGame
 {
     public class Archer : ICharacters 
     {
-        private int health = 100; // bien
+        private int health = 100; 
+        List<IItems> inventory; 
 
         public Archer(string name)
         {
@@ -20,6 +21,19 @@ namespace RoleplayGame
         Esto lo borramos debido a que equipa los objetos de forma rudimentaria
 
         */
+
+        public void EquipItems()
+        {
+
+            for (int i = 0; i < inventory.Count; i++ )
+            {
+                if(inventory[i].type == "Attack")
+                {
+                    this.attack += inventory[i].Value;
+                }
+            }
+
+        }
 
         public int Health
         {
