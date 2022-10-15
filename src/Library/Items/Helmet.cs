@@ -1,6 +1,6 @@
 namespace RoleplayGame
 {
-    public class Helmet
+    public class Helmet : IItems
     {
         public string type = "Defense";
         public int Value
