@@ -5,9 +5,11 @@ namespace RoleplayGame{
 
         string Name { get; set; }
 
-        int Damage {get; set; }
+        int Attack {get; set; }
 
         int Defense {get; set; }
+
+        int Health {get; set; }
 
         List<IItems> items {get; set; }
 
@@ -17,7 +19,7 @@ namespace RoleplayGame{
 
         int Health();
 
-        void ReceiveAttack(int power);
+        void ReceiveAttack();
 
         void Cure();
 
