@@ -1,59 +1,60 @@
+using System.Collections.Generic;
 namespace RoleplayGame
 {
     public class Wizard : ICharacters
     {
-        private int health = 100;
+        public string name { get; set; }
+        public int health { get; set; } 
+        public int attack { get; set; }
+        public int defense { get; set; }
+        List<IItems> inventory;
 
-        public Wizard(string name)
+        public Wizard(string name, int attack, int defense, int health)
         {
-            this.Name = name;
-        }
+            this.name = name;
+            this.attack = attack;
+            this.defense = defense;
+            this.health = health;
+            List<IItems> inventory = new List<IItems>();
+        } 
 
-        public string Name { get; set; }
+        
+        /* public Bow Bow { get; set; }
 
-        public SpellsBook SpellsBook { get; set; }
+        public Helmet Helmet { get; set; }
 
-        public Staff Staff { get; set; }
+        Esto lo borramos debido a que equipa los objetos de forma rudimentaria
 
-        public int AttackValue
+        */
+
+        public void EquipItems()
         {
-            get
-            {
-                return SpellsBook.AttackValue + Staff.AttackValue;
-            }
-        }
 
-        public int DefenseValue
-        {
-            get
+            for (int i = 0; i < inventory.Count; i++ )
             {
-                return SpellsBook.DefenseValue + Staff.DefenseValue;
-            }
-        }
+                if(inventory[i].type == "Attack")
+                {
+                    this.attack += inventory[i].Value;
+                }
 
-        public int Health
-        {
-            get
-            {
-                return this.health;
-            }
-            private set
-            {
-                this.health = value < 0 ? 0 : value;
+                else if(inventory[i].type == "Defense")
+                {
+                    this.defense += inventory[i].Value;
+                }
             }
         }
 
         public void ReceiveAttack(int power)
         {
-            if (this.DefenseValue < power)
+            if (this.defense < power)
             {
-                this.Health -= power - this.DefenseValue;
+                this.health -= power - this.defense;
             }
         }
 
         public void Cure()
         {
-            this.Health = 100;
+            this.health = 100;
         }
     }
 }

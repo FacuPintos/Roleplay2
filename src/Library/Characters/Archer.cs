@@ -8,14 +8,14 @@ namespace RoleplayGame
         public int attack { get; set; }
         public int defense { get; set; }
         List<IItems> inventory;
-        
+
         public Archer(string name, int attack, int defense, int health)
         {
             this.name = name;
             this.attack = attack;
             this.defense = defense;
             this.health = health;
-            List<IItems> inventory = new List<IItems>();
+            this.inventory = new List<IItems>();
         } 
 
         
