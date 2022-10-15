@@ -47,6 +47,11 @@ namespace RoleplayGame
             }
         }
 
+        public void PickUpItem(IItems item)
+        {
+            this.inventory.Add(item);
+        }
+
         public void ReceiveAttack(int power)
         {
             if (this.defense < power)
