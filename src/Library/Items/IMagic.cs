@@ -7,8 +7,6 @@ namespace RoleplayGame{
         int AttackValue {get; set;}
         int DefenseValue {get; set;}
 
-        void UseMagic();  
-
 
     }
 }

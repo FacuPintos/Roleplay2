@@ -8,6 +8,8 @@ namespace RoleplayGame
         public int attack { get; set; }
         public int defense { get; set; }
         List<IItems> inventory;
+        public SpellsBook spellsBook;
+        public bool hasLearnedSpells;
 
         public Wizard(string name, int attack, int defense, int health)
         {
@@ -15,17 +17,18 @@ namespace RoleplayGame
             this.attack = attack;
             this.defense = defense;
             this.health = health;
+            this.hasLearnedSpells = false;
             List<IItems> inventory = new List<IItems>();
         } 
 
-        
-        /* public Bow Bow { get; set; }
-
-        public Helmet Helmet { get; set; }
-
-        Esto lo borramos debido a que equipa los objetos de forma rudimentaria
-
-        */
+        public void useBook(){
+            
+            if(!this.hasLearnedSpells){
+            this.attack += spellsBook.AttackValue;
+            this.defense += spellsBook.DefenseValue;
+            this.hasLearnedSpells = true;
+            }
+        }
 
         public void EquipItems()
         {
