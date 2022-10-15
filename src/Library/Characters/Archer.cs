@@ -3,7 +3,7 @@ namespace RoleplayGame
 {
     public class Archer : ICharacters 
     {
-        private int health = 100; 
+        private int health; 
         public int attack;
         public int defense;
         List<IItems> inventory; 
