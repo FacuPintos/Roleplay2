@@ -12,13 +12,13 @@ namespace RoleplayGame{
 
         int health {get; set; }
 
-        List<IItems> inventory {get; set; }
-
-        void EquipItems();
-
         int Health();
 
-        void ReceiveAttack();
+        List<IItems> inventory {get; set; }
+
+        void EquipItems();        
+
+        void ReceiveAttack(int power);
 
         void Cure();
 
