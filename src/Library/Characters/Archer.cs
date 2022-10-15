@@ -4,12 +4,16 @@ namespace RoleplayGame
     public class Archer : ICharacters 
     {
         private int health = 100; 
+        public int attack;
+        public int defense;
         List<IItems> inventory; 
 
-        public Archer(string name)
+        public Archer(string name, int attack, int defense)
         {
             this.Name = name;
-            List<IItems> inventory = new List<IItems>(); 
+            this.attack = attack;
+            this.defense = defense;
+            List<IItems> inventory = new List<IItems>();
         }
 
         public string Name { get; set; }
@@ -31,8 +35,12 @@ namespace RoleplayGame
                 {
                     this.attack += inventory[i].Value;
                 }
-            }
 
+                else if(inventory[i].type == "Defense")
+                {
+                    this.defense += inventory[i].Value;
+                }
+            }
         }
 
         public int Health
