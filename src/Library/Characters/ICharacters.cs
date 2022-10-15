@@ -14,8 +14,7 @@ namespace RoleplayGame{
 
         int Health();
 
-        List<IItems> inventory {get; set; }
-
+        List<IItems> inventory 
         void EquipItems();        
 
         void ReceiveAttack(int power);
