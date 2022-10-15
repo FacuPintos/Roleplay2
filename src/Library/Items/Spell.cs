@@ -2,7 +2,7 @@ namespace RoleplayGame
 {
     public class Spell : IMagic
     {
-        public int AttackValue
+        public int Value
         {
             get
             {

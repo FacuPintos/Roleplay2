@@ -26,5 +26,5 @@ namespace RoleplayGame{
 
         void Cure();
 
-        }       
+    }       
 }

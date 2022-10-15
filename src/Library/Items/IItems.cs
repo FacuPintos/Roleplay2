@@ -2,9 +2,7 @@ namespace RoleplayGame{
 
     public interface IItems
     {
-
-        int Value {get; } 
+        int Value {get;} 
         string type {get;}
-
     }
 }

@@ -1,35 +1,25 @@
+using System.Collections.Generic;
 namespace RoleplayGame
 {
     public class Archer : ICharacters 
     {
-        private int health = 100;
+        private int health = 100; // bien
 
         public Archer(string name)
         {
             this.Name = name;
+            List<IItems> inventory = new List<IItems>(); 
         }
 
         public string Name { get; set; }
         
-        public Bow Bow { get; set; }
+        /* public Bow Bow { get; set; }
 
         public Helmet Helmet { get; set; }
 
-        public int AttackValue
-        {
-            get
-            {
-                return Bow.AttackValue;
-            }
-        }
+        Esto lo borramos debido a que equipa los objetos de forma rudimentaria
 
-        public int DefenseValue
-        {
-            get
-            {
-                return Helmet.DefenseValue;
-            }
-        }
+        */
 
         public int Health
         {
