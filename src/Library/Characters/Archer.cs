@@ -14,12 +14,7 @@ namespace RoleplayGame
             this.attack = attack;
             this.defense = defense;
             List<IItems> inventory = new List<IItems>();
-        }
-
-        public string Name { get; set; }
-        public string attack { get; set; }
-        public string defense { get; set; }
-        public string Name { get; set; }
+        } 
 
         
         /* public Bow Bow { get; set; }
