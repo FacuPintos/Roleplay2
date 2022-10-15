@@ -3,10 +3,11 @@ namespace RoleplayGame
 {
     public class Archer : ICharacters 
     {
-        private int health = 100; 
-        public int attack;
-        public int defense;
-        List<IItems> inventory; 
+        public string Name { get; set; }
+        public int health { get; set; } 
+        public int attack{ get; set; }
+        public int defense{ get; set; }
+        List<IItems> inventory;
 
         public Archer(string name, int attack, int defense)
         {
@@ -14,12 +15,7 @@ namespace RoleplayGame
             this.attack = attack;
             this.defense = defense;
             List<IItems> inventory = new List<IItems>();
-        }
-
-        public string Name { get; set; }
-        public string attack { get; set; }
-        public string defense { get; set; }
-        public string Name { get; set; }
+        } 
 
         
         /* public Bow Bow { get; set; }
