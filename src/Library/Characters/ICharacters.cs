@@ -14,6 +14,8 @@ namespace RoleplayGame{
 
         List<IItems> items {get; set; }
 
+        void EquipItems();
+
         int AttackValue();       
 
         int DefenseValue();
