@@ -17,6 +17,5 @@ namespace RoleplayGame
                 return 25;
             } 
         }
-
     }
 }
