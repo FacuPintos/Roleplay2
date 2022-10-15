@@ -12,7 +12,6 @@ namespace RoleplayGame{
 
         int health {get; set; }
 
-        int Health();
 
         List<IItems> inventory{} 
         void EquipItems();        
