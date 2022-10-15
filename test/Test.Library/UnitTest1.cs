@@ -2,15 +2,17 @@ using NUnit.Framework;
 
 namespace Test.Library
 {
+    [TestFixture]
     public class Tests
     {
-        [SetUp]
-        public void Setup()
+        [Test]
+        public void RecibirDamage()
         {
+            
         }
 
         [Test]
-        public void Test1()
+        public void EquiparItem()
         {
             Assert.Pass();
         }
