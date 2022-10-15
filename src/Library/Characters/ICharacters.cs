@@ -4,7 +4,7 @@ namespace RoleplayGame{
     public interface ICharacters
     {
 
-        string Name { get; set; }
+        string name { get; set; }
 
         int attack {get; set; }
 
