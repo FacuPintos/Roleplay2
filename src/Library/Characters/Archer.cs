@@ -46,15 +46,15 @@ namespace RoleplayGame
 
         public void ReceiveAttack(int power)
         {
-            if (this.DefenseValue < power)
+            if (this.defense < power)
             {
-                this.Health -= power - this.DefenseValue;
+                this.health -= power - this.defense;
             }
         }
 
         public void Cure()
         {
-            this.Health = 100;
+            this.health = 100;
         }
     }
 }
