@@ -11,7 +11,7 @@ namespace RoleplayGame
 
         public Archer(string name, int attack, int defense)
         {
-            this.Name = name;
+            this.name = name;
             this.attack = attack;
             this.defense = defense;
             List<IItems> inventory = new List<IItems>();
