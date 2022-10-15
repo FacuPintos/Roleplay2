@@ -4,6 +4,7 @@ namespace RoleplayGame{
     {
 
         int Value {get; } 
+        string type {get;}
 
     }
 }
