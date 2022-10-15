@@ -18,19 +18,22 @@ namespace RoleplayGame
             List<IItems> inventory = new List<IItems>();
         } 
 
-        public void EquipItems()
+        public void EquipItems(string item)
         {
 
             for (int i = 0; i < inventory.Count; i++ )
             {
-                if(inventory[i].type == "Attack")
-                {
-                    this.attack += inventory[i].Value;
-                }
 
-                else if(inventory[i].type == "Defense")
+                if(inventory[i].Name == item)
                 {
-                    this.defense += inventory[i].Value;
+                    if(inventory[i].type == "Attack")
+                    {
+                        this.attack += inventory[i].Value;
+                    }
+                     else if(inventory[i].type == "Defense")
+                    {
+                        this.defense += inventory[i].Value;
+                    }
                 }
             }
         }

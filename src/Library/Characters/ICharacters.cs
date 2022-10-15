@@ -12,7 +12,7 @@ namespace RoleplayGame{
 
         int health {get; set; }
 
-        void EquipItems();        
+        void EquipItems(string item);        
 
         void ReceiveAttack(int power);
 
