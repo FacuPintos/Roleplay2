@@ -9,6 +9,12 @@ namespace RoleplayGame
                 return 100;
             } 
         }
-
+        public string type
+        {
+            get
+            {
+                return "Attack";
+            }
+        }
     }
 }
