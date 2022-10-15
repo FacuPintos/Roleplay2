@@ -8,12 +8,13 @@ namespace RoleplayGame
         public int attack { get; set; }
         public int defense { get; set; }
         List<IItems> inventory;
-
-        public Archer(string name, int attack, int defense)
+        
+        public Archer(string name, int attack, int defense, int health)
         {
             this.name = name;
             this.attack = attack;
             this.defense = defense;
+            this.health = health;
             List<IItems> inventory = new List<IItems>();
         } 
 
@@ -40,18 +41,6 @@ namespace RoleplayGame
                 {
                     this.defense += inventory[i].Value;
                 }
-            }
-        }
-
-        public int Health
-        {
-            get
-            {
-                return this.health;
-            }
-            private set
-            {
-                this.health = value < 0 ? 0 : value;
             }
         }
 
