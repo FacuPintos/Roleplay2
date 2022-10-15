@@ -3,10 +3,10 @@ namespace RoleplayGame
 {
     public class Archer : ICharacters 
     {
-        private int health; 
-        public int attack;
-        public int defense;
-        List<IItems> inventory; 
+        public int health { get; set; } 
+        public int attack { get; set; }
+        public int defense { get; set; }
+        List<IItems> inventory { get; set; }
 
         public Archer(string name, int attack, int defense)
         {
