@@ -6,19 +6,15 @@ namespace RoleplayGame{
 
         string Name { get; set; }
 
-        int Attack {get; set; }
+        int attack {get; set; }
 
-        int Defense {get; set; }
+        int defense {get; set; }
 
-        int Health {get; set; }
+        int health {get; set; }
 
         List<IItems> inventory {get; set; }
 
         void EquipItems();
-
-        int AttackValue();       
-
-        int DefenseValue();
 
         int Health();
 
