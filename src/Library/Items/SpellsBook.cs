@@ -5,8 +5,6 @@ namespace RoleplayGame
     public class SpellsBook : IMagic
     {
         public Spell[] Spells { get; set; }
-
-        public type = "Book";
         
         public int AttackValue
         {
